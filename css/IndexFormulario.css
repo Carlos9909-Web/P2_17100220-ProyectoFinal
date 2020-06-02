@@ -1,0 +1,86 @@
+html{
+    font-size: 15px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+body{
+    background:url(https://ep01.epimg.net/economia/imagenes/2018/05/24/actualidad/1527173501_498687_1527174715_noticia_normal_recorte1.jpg) no-repeat;
+    background-size: cover;
+}
+*{
+    box-sizing: border-box;
+    font-size: 18px;
+}
+.form-registrar{
+    position: relative;
+    top: 30px;
+    left: 0px;
+    color: black;
+    background-color: rgba(165, 131, 99,0.9);
+    border: 1px solid rgb(141, 135, 135);
+    width: 600px;
+    height: 680px;
+    padding: 15px;
+    border-radius:5px;
+}
+
+.button{
+    border: none;
+    width: 100%;
+    color: white;
+    font-size: 20px;
+    background: black;
+    padding: 15px 20px;
+    border-radius:5px;
+    cursor: pointer;
+    
+}
+.button:hover{
+    background: rgb(53, 50, 50);
+}
+input[type="text"], input[type="number"]{
+    font-size: 20px;
+    width: 100%;
+    padding: 10px;
+    border-radius:5px;
+}
+
+input.error {
+    font-size: 20px;
+    padding: 10px;
+    border-top-width: 2px;
+    border-right-width: 2px;
+    border-bottom-width: 2px;
+    border-left-width: 2px;
+    border-color: red;
+}
+
+label{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+h2{
+    text-align: center;
+    font-size: 30px;
+}
+
+.input-cont{
+    margin-bottom: 10px;
+    border: none;
+}
+
+.titulo{
+    padding: 10px;
+    background: rgb(48, 8, 8);
+    color: white;
+}
+
+#tabla{
+    position: relative;
+    width: 800px;
+    background-color:  rgba(165, 131, 99,0.9);
+    left: 650px;
+    top: -650px;
+    padding: 10px;
+    border-radius:5px;
+}
