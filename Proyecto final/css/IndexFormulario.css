@@ -12,8 +12,8 @@ body{
 }
 .form-registrar{
     position: relative;
-    top: 30px;
-    left: 0px;
+    top: 10px;
+    left: 10px;
     color: black;
     background-color: rgba(165, 131, 99,0.9);
     border: 1px solid rgb(141, 135, 135);
@@ -83,4 +83,20 @@ h2{
     top: -650px;
     padding: 10px;
     border-radius:5px;
+}
+
+#buscador{
+    top: -670px;
+    position: relative;
+    width: 300px;
+    background-color:  rgba(165, 131, 99,0.9);
+    left: 650px;
+    border-radius:5px;
+}
+.salir{
+    border: none;
+    position: relative;
+    left: 650px;
+    top: 20px;
+    width: 150px;
 }

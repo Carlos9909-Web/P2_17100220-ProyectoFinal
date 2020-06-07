@@ -18,6 +18,7 @@ function agregardatos(Tipo, Marca, Modelo, NumSerie, Calibre){
             success: function(r){
                 if(r==1){
                     $('#tabla').load('../componentes/tabla.php');
+                    $('#buscador').load('../componentes/buscador.php');
                     alertify.success("Agregado con exito");
                 }else{
                     alertify.error("Fallo el servidor");
@@ -73,6 +74,13 @@ function preguntarSiNo(id){
         function(){ eliminarDatos(id) }
         , function(){ alertify.error('Cancelado')});
 }
+
+function preguntarsino(){
+    alertify.confirm('Salir', '¿Esta seguro que desea salir?', 
+        function(){ location.href="../html/Login.html" }
+        , function(){ alertify.error('Cancelado')});
+}
+
 function eliminarDatos(id){
     cadena= "id=" + id;
     $.ajax({

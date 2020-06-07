@@ -1,11 +1,12 @@
 <?php
+    session_start();
     include '../php/conexion.php';
 ?>
 
 <div class="row">
     <div class="col-sm-12">
         <h2 style="background: rgb(48, 8, 8); color:white; padding:10px;">Tabla del Registro</h2>
-        <table class="table table-hover table-condensed table-bordered table-sm table-dark table-responsive">
+        <table class="table table-hover table-condensed table-bordered table-sm table-dark table-responsive col-sm-12">
             <tr>
                 <td>Tipo</td>
                 <td>Marca</td>
@@ -17,7 +18,17 @@
             </tr>
 
             <?php
-                $sql="SELECT id, tipo, marca, modelo, numSerie, calibre from registro";
+                if(isset($_SESSION['consulta'])){
+                    if($_SESSION['consulta']>0){
+                        $id=$_SESSION['consulta'];
+                        $sql="SELECT id, tipo, marca, modelo, numSerie, calibre from registro where id='$id'";
+                    }else{
+                        $sql="SELECT id, tipo, marca, modelo, numSerie, calibre from registro";
+                    }
+                }else{
+                    $sql="SELECT id, tipo, marca, modelo, numSerie, calibre from registro";
+                }
+
                 $result=mysqli_query($conexion,$sql);
                 while($ver=mysqli_fetch_row($result)){
 

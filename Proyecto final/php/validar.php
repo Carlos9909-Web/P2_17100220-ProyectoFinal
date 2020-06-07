@@ -10,7 +10,7 @@ $filas = mysqli_num_rows($resultado);
 
 if($filas>0){
     //Redireccionar a otra pagina
-    header("location: ../html/Formulario.html");
+    header("location: ../html/Formulario.php");
 }
 else{
     echo '<script>

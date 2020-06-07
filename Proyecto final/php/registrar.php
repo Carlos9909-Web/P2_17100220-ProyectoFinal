@@ -28,11 +28,11 @@ if($resultado==false){
           </script>';
 } else{
     //Redireccionar a otra pagina
-    header("location: ../html/Login.html");
     echo '<script>
           alert("Ingrese con su nueva cuenta para acceder al registro");
           window.history.go(-1);
           </script>';
+    header("location: ../html/Login.html");
 }
 //cerrar conexion
 mysqli_close($conexion);
